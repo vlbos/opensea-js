@@ -573,7 +573,7 @@ export interface UnhashedOrder extends WyvernOrder {
 }
 
 export interface UnsignedOrder extends UnhashedOrder {
-  hash: string
+  hash?: string
 }
 
 /**

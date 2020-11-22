@@ -49,11 +49,11 @@ suite('api', () => {
   test('Includes API key in token request', async () => {
     const oldLogger = rinkebyApi.logger
 
-    const logPromise = new Promise((resolve, reject) => {
+    const logPromise = new Promise((resolve, reject):void => {
       rinkebyApi.logger = log => {
         try {
           assert.include(log, `"X-API-KEY":"${RINKEBY_API_KEY}"`)
-          resolve()
+          resolve("")
         } catch (e) {
           reject(e)
         } finally {
